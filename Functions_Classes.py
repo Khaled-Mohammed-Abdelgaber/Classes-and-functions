@@ -1,6 +1,25 @@
-import tensorflow_datasets as tfds
+import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras import backend as K
+from keras.layers import *
 import pandas as pd
+from sklearn.model_selection import train_test_split
+import matplotlib.pyplot as plt
+from keras.layers import *
+from keras.models import Sequential
+from keras.callbacks import ModelCheckpoint
 import numpy as np
+from keras.models import Model
+from  IPython.display import clear_output
+import seaborn as sns
+#for Kmeans
+from sklearn.cluster import KMeans
+from sklearn.metrics import silhouette_score
+
+from sklearn.decomposition import PCA
+import tensorflow_datasets as tfds
+from IPython.display import clear_output
+
 
 #function to split datasets to train and test
 def test_train_df_spliter(df,test_ratio = 0.2):
